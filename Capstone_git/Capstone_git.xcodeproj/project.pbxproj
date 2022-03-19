@@ -15,6 +15,8 @@
 		B47BDF0827E65DAA00A8057B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47BDF0627E65DAA00A8057B /* LaunchScreen.storyboard */; };
 		B47BDF1327E65DAA00A8057B /* Capstone_gitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF1227E65DAA00A8057B /* Capstone_gitTests.swift */; };
 		B47BDF1E27E65DAA00A8057B /* Capstone_gitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF1D27E65DAA00A8057B /* Capstone_gitUITests.swift */; };
+		B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF3127E6652100A8057B /* MapViewController.swift */; };
+		B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = B47BDF3627E6661700A8057B /* RestaurantsLocation.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B47BDF1927E65DAA00A8057B /* Capstone_gitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Capstone_gitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47BDF1D27E65DAA00A8057B /* Capstone_gitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capstone_gitUITests.swift; sourceTree = "<group>"; };
 		B47BDF1F27E65DAA00A8057B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B47BDF3127E6652100A8057B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B47BDF3627E6661700A8057B /* RestaurantsLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestaurantsLocation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				B47BDEFB27E65DA900A8057B /* AppDelegate.swift */,
 				B47BDEFD27E65DA900A8057B /* SceneDelegate.swift */,
 				B47BDEFF27E65DA900A8057B /* ViewController.swift */,
+				B47BDF3627E6661700A8057B /* RestaurantsLocation.json */,
 				B47BDF0127E65DA900A8057B /* Main.storyboard */,
 				B47BDF0427E65DAA00A8057B /* Assets.xcassets */,
 				B47BDF0627E65DAA00A8057B /* LaunchScreen.storyboard */,
 				B47BDF0927E65DAA00A8057B /* Info.plist */,
+				B47BDF3127E6652100A8057B /* MapViewController.swift */,
 			);
 			path = Capstone_git;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B47BDF0827E65DAA00A8057B /* LaunchScreen.storyboard in Resources */,
+				B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */,
 				B47BDF0527E65DAA00A8057B /* Assets.xcassets in Resources */,
 				B47BDF0327E65DA900A8057B /* Main.storyboard in Resources */,
 			);
@@ -261,6 +268,7 @@
 				B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */,
 				B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */,
 				B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */,
+				B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
