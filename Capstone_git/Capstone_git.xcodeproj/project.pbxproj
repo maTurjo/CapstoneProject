@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44A220227EB9FB800C309AC /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A220127EB9FB800C309AC /* FeaturedViewController.swift */; };
 		B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDEFB27E65DA900A8057B /* AppDelegate.swift */; };
 		B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDEFD27E65DA900A8057B /* SceneDelegate.swift */; };
 		B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDEFF27E65DA900A8057B /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44A220127EB9FB800C309AC /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		B47BDEF827E65DA900A8057B /* Capstone_git.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone_git.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B47BDEFB27E65DA900A8057B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B47BDEFD27E65DA900A8057B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				B47BDF0927E65DAA00A8057B /* Info.plist */,
 				B47BDF3127E6652100A8057B /* MapViewController.swift */,
 				B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */,
+				B44A220127EB9FB800C309AC /* FeaturedViewController.swift */,
 			);
 			path = Capstone_git;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */,
 				B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */,
 				B4CBC6F727EA57BB00677FF0 /* FeaturedCollectionViewCell.swift in Sources */,
+				B44A220227EB9FB800C309AC /* FeaturedViewController.swift in Sources */,
 				B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */,
 				B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */,
 			);

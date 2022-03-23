@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ok7-K7-b12">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jf2-J5-vVL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -38,7 +38,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sDy-Wm-nR6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="tCI-Pj-uhy"/>
+                                            <segue destination="sDy-Wm-nR6" kind="presentation" modalPresentationStyle="fullScreen" id="pZy-xW-O0C"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38E-MK-IDR">
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfb-kD-Uno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1981" y="-488"/>
+            <point key="canvasLocation" x="-2922" y="-755"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VyP-bu-sr7">
@@ -86,12 +86,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HEG-RW-6Mg" kind="relationship" relationship="rootViewController" id="aj4-rV-ceu"/>
+                        <segue destination="ok7-K7-b12" kind="relationship" relationship="rootViewController" id="9mm-wr-gSO"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIK-j0-Wah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="0.0"/>
+            <point key="canvasLocation" x="-1039" y="74"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Tff-tw-Qa3">
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKa-A3-Zjz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="351" y="0.0"/>
+            <point key="canvasLocation" x="903" y="153"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PoU-T4-MXy">
@@ -203,18 +203,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjN-pg-t1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-414" y="-1039"/>
+            <point key="canvasLocation" x="-1320" y="-905"/>
         </scene>
-        <!--View Controller-->
+        <!--Featured View Controller-->
         <scene sceneID="53P-yt-eXz">
             <objects>
-                <viewController storyboardIdentifier="vue" id="ok7-K7-b12" customClass="ViewController" customModule="Capstone_git" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vue" id="ok7-K7-b12" customClass="FeaturedViewController" customModule="Capstone_git" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leA-Vz-dHa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NpN-3P-vTf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="204.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="193.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iHH-11-Y08">
                                     <size key="itemSize" width="128" height="128"/>
@@ -224,7 +224,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="singleCell" id="eyK-rJ-rOn" customClass="FeaturedCollectionViewCell" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="38.5" width="300" height="128"/>
+                                        <rect key="frame" x="0.0" y="33" width="300" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nUe-0N-alK">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
@@ -252,29 +252,46 @@
                                     <outlet property="delegate" destination="ok7-K7-b12" id="zNI-lX-JjB"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-eA-iRq">
+                                <rect key="frame" x="334" y="782" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="a97-MU-LIm"/>
+                                    <constraint firstAttribute="width" constant="80" id="gDP-pO-Ljo"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="location"/>
+                                <connections>
+                                    <segue destination="HEG-RW-6Mg" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="dMC-Wg-NhO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TXC-9z-X8O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TXC-9z-X8O" firstAttribute="trailing" secondItem="NpN-3P-vTf" secondAttribute="trailing" id="MdN-1f-2bY"/>
+                            <constraint firstItem="6tJ-eA-iRq" firstAttribute="bottom" secondItem="TXC-9z-X8O" secondAttribute="bottom" id="PTA-QN-chT"/>
                             <constraint firstItem="NpN-3P-vTf" firstAttribute="leading" secondItem="TXC-9z-X8O" secondAttribute="leading" id="TdP-wj-25e"/>
                             <constraint firstItem="NpN-3P-vTf" firstAttribute="height" secondItem="TXC-9z-X8O" secondAttribute="height" multiplier="0.25" id="gSN-3j-tN4"/>
+                            <constraint firstItem="6tJ-eA-iRq" firstAttribute="trailing" secondItem="TXC-9z-X8O" secondAttribute="trailing" id="hm4-GU-jDk"/>
                             <constraint firstItem="NpN-3P-vTf" firstAttribute="top" secondItem="TXC-9z-X8O" secondAttribute="top" id="pH7-vw-1kJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dcF-iB-Ho3"/>
+                    <connections>
+                        <outlet property="featuredCollectionView" destination="NpN-3P-vTf" id="J7s-wy-064"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGy-Lu-k5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.5797101449275" y="-1063.3928571428571"/>
+            <point key="canvasLocation" x="32" y="106"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Ct-Uo-NcP"/>
-        <segue reference="lAV-uI-68f"/>
+        <segue reference="pZy-xW-O0C"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="03" width="300" height="200"/>
         <image name="launch icon" width="234" height="284"/>
+        <image name="location" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
