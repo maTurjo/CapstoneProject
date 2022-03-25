@@ -7,7 +7,4 @@
 
 import UIKit
 
-class FeaturedCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var FeaturedImage: UIImageView!
-}
+

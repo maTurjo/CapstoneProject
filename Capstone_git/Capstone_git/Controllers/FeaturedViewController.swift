@@ -7,71 +7,130 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet weak var dishSlider: UICollectionView!
+    @IBOutlet weak var restaurantSlider: UICollectionView!
+    @IBOutlet weak var label: UILabel!
     var featuredImages:[String]=["01","02","03","04","05"]
-    @IBOutlet weak var featuredCollectionView: UICollectionView!
-    
     @IBOutlet weak var topSlider: UICollectionView!
-    
     var imgArr = [UIImage(named: "bakery"),UIImage(named: "cake-slice"),UIImage(named: "chicken-leg"),UIImage(named: "hamburger"),UIImage(named: "hot-soup"),UIImage(named: "momo"),UIImage(named: "pizza"),UIImage(named: "salad"),UIImage(named: "sandwhich")]
-    var nameArr = ["Bakery","Dessert","Chicken","Burger", "Soup","Momo", "Pizza","Salad", "Sandwhich"]
+    var categoryArr = ["Bakery","Dessert","Chicken","Burger", "Soup","Momo", "Pizza","Salad", "Sandwhich"]
+    var restaurantNameArr = ["McDonalds","Pizza Hut","KFC","Burger King", "Jimmy The Greek"]
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let window = UIApplication.shared.windows[0]
+        let safeFrame = window.safeAreaLayoutGuide.layoutFrame
+        let width = safeFrame.width
+        let height = safeFrame.height
+        if(collectionView == restaurantSlider || collectionView == dishSlider)
+        {
+            //(100 / () * 50)
+             print(UIScreen.main.bounds.height)
+            //collectionView.
+            return CGSize(width: width * 0.70, height: height*0.20)
+            
+        }
+        else
+        {
+           // label.text =  String(format: "%.2f", height*0.08)
+            return CGSize(width:height*0.08, height: height*0.08)
+        }
+        return CGSize(width: 20, height: 50)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         var Count = 0
-        if(collectionView == featuredCollectionView){
-        return featuredImages.count
+        if(collectionView == restaurantSlider || collectionView == dishSlider)
+        {
+            return featuredImages.count
         }
-        else{
+        else
+        {
             return imgArr.count
         }
         return Count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if(collectionView == featuredCollectionView){
-             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath)
-            as! FeaturedCollectionViewCell
-            
-            cell.FeaturedImage.image=UIImage(named: featuredImages[indexPath.row])
-            
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        if(collectionView == restaurantSlider)
+        {
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath)
+            as! RestaurentCollectionView
+            cell.lblRestaurantName.text = restaurantNameArr[indexPath.row]           
+            cell.imgRestaurant.image=UIImage(named: featuredImages[indexPath.row])
+           
+            cell.layer.cornerRadius = 10
             return cell
         }
-        else{
-            
+        else if(collectionView == dishSlider)
+        {
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath)
+            as! DishCollectionView
+            cell.lblDishName.text = restaurantNameArr[indexPath.row]
+            cell.imgDish.image=UIImage(named: featuredImages[indexPath.row])
+            return cell
+        }
+        else
+        {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TopSliderCollection
             cell.foodIcons.image  = imgArr[indexPath.row]
-            cell.lblDisplay.text = nameArr[indexPath.row]
+            cell.lblDisplay.text = categoryArr[indexPath.row]
             return cell
         }
-        
-       return UICollectionViewCell()
-        
-    } 
-
+        return UICollectionViewCell()
+    }
     
-   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       // self.p
+        if(collectionView == restaurantSlider)
+        {
+            let RestaurantName = restaurantNameArr[indexPath.row]
+            let vc = self.storyboard?.instantiateViewController(identifier: "SingleRestaurantViewController") as!		 SingleRestaurantViewController
+            vc.RestaurantName = RestaurantName
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        if(collectionView == topSlider)
+        {
+            let CategoryName = categoryArr[indexPath.row]
+            let vc = self.storyboard?.instantiateViewController(identifier: "CategoryViewController") as!         CategoryViewController
+            vc.CategoryName = CategoryName
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
-    
-    override func viewDidLoad() {
-        
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         topSlider.delegate = self
         topSlider.dataSource = self
-               
-    
-        
-        // Do any additional setup after loading the view.
+        restaurantSlider.delegate = self
+        restaurantSlider.dataSource = self
+        dishSlider.delegate = self
+        dishSlider.dataSource = self
     }
-
 }
 
-
-class TopSliderCollection : UICollectionViewCell {
-   
+class TopSliderCollection : UICollectionViewCell
+{
     @IBOutlet weak var lblDisplay: UILabel!
     @IBOutlet weak var foodIcons: UIImageView!
-    // @IBOutlet weak var myWebSeries: UIImageView!
 }
+
+class RestaurentCollectionView: UICollectionViewCell
+{
+    @IBOutlet weak var lblRestaurantName: UILabel!
+    @IBOutlet weak var imgRestaurant: UIImageView!
+}
+
+class DishCollectionView: UICollectionViewCell
+{ 
+    @IBOutlet weak var imgDish: UIImageView!  
+    @IBOutlet weak var lblDishName: UILabel!
+   
+}
+
+

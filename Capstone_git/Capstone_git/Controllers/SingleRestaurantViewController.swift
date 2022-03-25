@@ -9,9 +9,11 @@ import UIKit
 
 class SingleRestaurantViewController: UIViewController {
 
+    @IBOutlet weak var lblRestaurantName: UILabel!
+    var RestaurantName = "";
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        lblRestaurantName.text = RestaurantName
         // Do any additional setup after loading the view.
     }
     

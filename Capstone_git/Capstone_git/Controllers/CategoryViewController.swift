@@ -9,9 +9,12 @@ import UIKit
 
 class CategoryViewController: UIViewController {
 
+    @IBOutlet weak var lblCategoryName: UILabel!
+    var CategoryName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        lblCategoryName.text = CategoryName
         // Do any additional setup after loading the view.
     }
     
