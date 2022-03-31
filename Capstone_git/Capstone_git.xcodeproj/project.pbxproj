@@ -26,6 +26,7 @@
 		B47BDF1E27E65DAA00A8057B /* Capstone_gitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF1D27E65DAA00A8057B /* Capstone_gitUITests.swift */; };
 		B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF3127E6652100A8057B /* MapViewController.swift */; };
 		B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = B47BDF3627E6661700A8057B /* RestaurantsLocation.json */; };
+		B488467927F63916006DA038 /* loginData.json in Resources */ = {isa = PBXBuildFile; fileRef = B488467827F63916006DA038 /* loginData.json */; };
 		B4CBC6F727EA57BB00677FF0 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		B47BDF1F27E65DAA00A8057B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B47BDF3127E6652100A8057B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B47BDF3627E6661700A8057B /* RestaurantsLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestaurantsLocation.json; sourceTree = "<group>"; };
+		B488467827F63916006DA038 /* loginData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginData.json; sourceTree = "<group>"; };
 		B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				B47BDF0427E65DAA00A8057B /* Assets.xcassets */,
 				B47BDF0627E65DAA00A8057B /* LaunchScreen.storyboard */,
 				B47BDF0927E65DAA00A8057B /* Info.plist */,
+				B488467827F63916006DA038 /* loginData.json */,
 			);
 			path = Capstone_git;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B488467927F63916006DA038 /* loginData.json in Resources */,
 				B47BDF0827E65DAA00A8057B /* LaunchScreen.storyboard in Resources */,
 				B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */,
 				B47BDF0527E65DAA00A8057B /* Assets.xcassets in Resources */,
