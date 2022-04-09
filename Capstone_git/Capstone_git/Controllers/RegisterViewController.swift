@@ -7,23 +7,57 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
-
+class RegisterViewController: UIViewController,UITextFieldDelegate {
+    
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
+        name.delegate=self
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+  
+
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var address: UITextField!
+    
+    @IBOutlet weak var contactNumber: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBAction func RegisterNow(_ sender: Any) {
+       
+        let userName=name.text!
+        let userPassword=password.text!
+        
+        let newUser:loginData = loginData(userName: userName, userPassword: userPassword)
+                        
+        AppState.loginDataCol.append(newUser)
+        
+      
+        
+    }
+    
+    
+ 
+ 
+    
 
 }
+
+
+

@@ -7,8 +7,16 @@
 
 import UIKit
 
-struct loginData:Identifiable,Decodable{
-    var id=UUID()
+
+
+public class AppState {
+     
+     public static var loginDataCol = [loginData]()
+}
+
+
+public struct loginData:Identifiable,Decodable,Encodable{
+    public var id=UUID()
     let userName:String
     let userPassword:String
     
@@ -22,7 +30,7 @@ class LoginViewController: UIViewController {
 
    
     
-    private var loginDataCol = [loginData]()
+//    private var loginDataCol = [loginData]()
     
     @IBOutlet weak var errorBox: UITextField!
     @IBOutlet weak var userName: UITextField!
@@ -31,7 +39,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        loadLogins()
+    
+        //adding existing data
+        AppState.loginDataCol.append(loginData(userName: "Turjo", userPassword: "1234"))
         
         // Do any additional setup after loading the view.
     }
@@ -39,18 +49,20 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginClick(_ sender: Any) {
         
-      
+        let loginDataCol = AppState.loginDataCol
+        
+        
         for login in loginDataCol {
             errorBox.text=""
             if(userName.text!.isEqual(login.userName) && userPassword.text!.isEqual(login.userPassword)){
                 changeToHomeScreen()
                 return
             }
-            userName.text=""
-            userPassword.text=""
-            errorBox.text = "Please Enter Correct Credentials"
+           
+            
             
         }
+        errorBox.text = "Please Enter Correct Credentials"
         errorBox.textColor=UIColor.red
  
         
@@ -59,24 +71,15 @@ class LoginViewController: UIViewController {
     func changeToHomeScreen(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "homeScreen")
-                self.present(newViewController, animated: true, completion: nil)
+        
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
+        
     }
     
-    //Loading saved login data
-    func loadLogins(){
-        
-        guard let path=Bundle.main.path(forResource: "loginData", ofType: "json")else{
-            fatalError("File Location not found")
-            
-        }
-        
-        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {return}
-        
-        let logindata = try? JSONDecoder().decode([loginData].self,from: data)
-        if let logindata=logindata{
-            self.loginDataCol=logindata
-        }
-        
-    }
+
+    
+    
+ 
 
 }
