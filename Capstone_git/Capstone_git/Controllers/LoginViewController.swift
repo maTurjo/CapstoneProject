@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
     
     func changeToHomeScreen(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "homeScreen")
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainTabViewController")
         
         newViewController.modalPresentationStyle = .fullScreen
         self.present(newViewController, animated: true, completion: nil)

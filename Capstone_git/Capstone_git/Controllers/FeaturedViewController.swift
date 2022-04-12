@@ -91,14 +91,26 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
             let RestaurantName = restaurantNameArr[indexPath.row]
             let vc = self.storyboard?.instantiateViewController(identifier: "SingleRestaurantViewController") as!		 SingleRestaurantViewController
             vc.RestaurantName = RestaurantName
-            self.navigationController?.pushViewController(vc, animated: true)
+           // self.navigationController?.pushViewController(vc, animated: true)
+            
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+            
+            //if let Navigation = self.navigationController{
+              //  print("yes")
+            //}
+            //else{
+               // print("no")
+            //}
         }
         if(collectionView == topSlider)
         {
             let CategoryName = categoryArr[indexPath.row]
-            let vc = self.storyboard?.instantiateViewController(identifier: "CategoryViewController") as!         CategoryViewController
+            let vc = self.storyboard?.instantiateViewController(identifier: "CategoryViewController") as! CategoryViewController
             vc.CategoryName = CategoryName
-            self.navigationController?.pushViewController(vc, animated: true)
+            //self.navigationController?.pushViewController(vc, animated: true)            
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
