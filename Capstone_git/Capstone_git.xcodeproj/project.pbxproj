@@ -6,7 +6,7 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
+/* Begin PBXBuildFile section */        
 		13D748992806365E00E150F6 /* Restaurents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7489B2806365E00E150F6 /* Restaurents.json */; };
 		B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */; };
 		B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C727ECC8A000B54FFD /* SearchListViewController.swift */; };
@@ -48,9 +48,7 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXFileReference section */
-		2C7181CF280663E000BB3DD1 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrderViewController.swift; sourceTree = "<group>"; };
-		2CAC206D28067FB000952247 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListOrdersViewController.swift; sourceTree = "<group>"; };
+/* Begin PBXFileReference section */		
 		13D7489A2806365E00E150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Restaurents.json; sourceTree = "<group>"; };
 		B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantViewController.swift; sourceTree = "<group>"; };
 		B42086C727ECC8A000B54FFD /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchListViewController.swift; sourceTree = "<group>"; };
