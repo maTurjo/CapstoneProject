@@ -1,9 +1,7 @@
 [
     {"name": "McDonald's","description": "Bakery, Chicken ,Fish, Burgers, Wraps","logo":"mc.png"},
-<<<<<<< HEAD
     {"name": "Boston Pizza","description": "Wings, Pizza, Sandwhichs, Italian, Salads","logo":"domi.png"},
-    {"name": "Boston Maggie","description": "Wings, Pizza, Sandwichs, Italian, Salads","logo":"mc.png"}
-=======
+    {"name": "Boston Maggie","description": "Wings, Pizza, Sandwichs, Italian, Salads","logo":"mc.png"},
     {"name": "Boston Pizza","description": "Wings, Pizza, Sandwhichs, Italian, Salads, Dessert","logo":"domi.png"},
     {"name": "Boston Maggie","description": "Wings, Pizza, Sandwhichs, Italian, Salads, Chicken","logo":"mc.png"},
     {"name": "Tim Hortons","description": "Coffee, Sandwhichs, Burgers, Salads, Tea, Doughnuts, Momo","logo":"tims.png"},
@@ -16,5 +14,6 @@
     {"name": "Red Lobster","description": "Mashed Patatoes,Crab","logo":"boston.png"},
     {"name": "Boston Maggie","description": "Original Burger,Greek Salad,BBQ ","logo":"Red.jpeg"},
     {"name": "Baskin Robins","description": "Original Burger,Greek Salad,BBQ Chicken Salad,Shakes","logo":"boston.png"},
->>>>>>> 75eb316fb002fdb3eac8249d7a9a583308931ef5
+    {"name": "Wendys","description": "Coffee, Soft drink, Smoothy, Milkshake, Cake, Browney","logo":"wendys.png"},
+    {"name": "Boston Pizza","description": "Wings, Pizza, Sandwhichs, Italian, Salads","logo":"domi.png"}
 ]

@@ -5,17 +5,22 @@
 
 import UIKit
 
+
 class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+    	
+    static var SharedCategoryName:String = ""
     @IBOutlet weak var dishSlider: UICollectionView!
     @IBOutlet weak var restaurantSlider: UICollectionView!
     @IBOutlet weak var label: UILabel!
-    var featuredImages:[String]=["mc","pizzapizza","tims","Red","Harvey"]
-    var featuredImages2:[String]=["pizza","wings","pasta","fries","burger"]
+    
+    var featuredImages:[String]=["mc_large","pizza_hut","Tim","burger_king","subway_large"]
+    var dishimages:[String]=["pizza_1","chicken_wings","pasta_cream","fries_sauce","burgers"]
     @IBOutlet weak var topSlider: UICollectionView!
     var imgArr = [UIImage(named: "bakery"),UIImage(named: "cake-slice"),UIImage(named: "chicken-leg"),UIImage(named: "hamburger"),UIImage(named: "hot-soup"),UIImage(named: "momo"),UIImage(named: "pizza"),UIImage(named: "salad"),UIImage(named: "sandwhich")]
     var categoryArr = ["Bakery","Dessert","Chicken","Burger", "Soup","Momo", "Pizza","Salad", "Sandwhich"]
-    var restaurantNameArr = ["McDonalds","Pizza Hut","KFC","Burger King", "Jimmy The Greek"]
+    var restaurantNameArr = ["McDonalds","Pizza Hut","Tim Hortons","Burger King", "Sub way"]
+    var dishNameArr = ["Pizza","Chicken Wings","Pasta","French Fries", "Burgers"]
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -69,8 +74,9 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
         {
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath)
             as! DishCollectionView
-            cell.lblDishName.text = restaurantNameArr[indexPath.row]
-            cell.imgDish.image=UIImage(named: featuredImages2[indexPath.row])
+            cell.lblDishName.text = dishNameArr[indexPath.row]
+            cell.imgDish.image=UIImage(named: dishimages[indexPath.row])
+            cell.layer.cornerRadius = 10
             return cell
         }
         else
@@ -95,21 +101,18 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
             
-            //if let Navigation = self.navigationController{
-              //  print("yes")
-            //}
-            //else{
-               // print("no")
-            //}
+            
         }
         if(collectionView == topSlider)
         {
             let CategoryName = categoryArr[indexPath.row]
             let vc = self.storyboard?.instantiateViewController(identifier: "SearchListViewController") as! SearchListViewController
             vc.CategoryName = CategoryName
+            FeaturedViewController.SharedCategoryName = CategoryName
             //self.navigationController?.pushViewController(vc, animated: true)            
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            //vc.modalPresentationStyle = .fullScreen
+            //self.present(vc, animated: true, completion: nil)
+            self.tabBarController?.selectedIndex = 1;
         }
     }
     
