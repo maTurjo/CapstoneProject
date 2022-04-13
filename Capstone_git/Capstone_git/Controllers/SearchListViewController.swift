@@ -68,7 +68,7 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
     //Fill the table view with todo lost
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1",for:indexPath) as! RestaurentTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cel1",for:indexPath) as! RestaurentTableCell
         let restaurent = restaurentData[indexPath.row]
         //cell.lblResName?.text = restaurent.name
         cell.lblResName?.text =  restaurent.name
