@@ -473,9 +473,9 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="singleCell" translatesAutoresizingMaskIntoConstraints="NO" id="4gm-lb-phW" customClass="RestaurentCollectionView" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-35.5" width="50" height="250"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="128" height="128"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-JR-2xs" userLabel="Img Restaurant">
@@ -532,9 +532,9 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="singleCell" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-CT-Rkj" customClass="DishCollectionView" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-35.5" width="40" height="250"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="128" height="128"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-ZE-0eD" userLabel="Img Restaurant">
