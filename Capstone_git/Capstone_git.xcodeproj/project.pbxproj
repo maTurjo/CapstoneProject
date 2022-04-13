@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13D748992806365E00E150F6 /* Restaurents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7489B2806365E00E150F6 /* Restaurents.json */; };
 		B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */; };
 		B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C727ECC8A000B54FFD /* SearchListViewController.swift */; };
 		B42086CD27ECC8BC00B54FFD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086CC27ECC8BC00B54FFD /* CategoryViewController.swift */; };
@@ -48,9 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13D7488728061EF200E150F6 /* Restaurents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurents.json; sourceTree = "<group>"; };
+		13D7489A2806365E00E150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Restaurents.json; sourceTree = "<group>"; };
 		B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantViewController.swift; sourceTree = "<group>"; };
-		B42086C727ECC8A000B54FFD /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		B42086C727ECC8A000B54FFD /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchListViewController.swift; path = /Users/user204571/Desktop/CapstoneProject/Capstone_git/Capstone_git/Controllers/SearchListViewController.swift; sourceTree = "<absolute>"; };
 		B42086CC27ECC8BC00B54FFD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		B42086D127ECC8D800B54FFD /* SingleFoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFoodItemViewController.swift; sourceTree = "<group>"; };
 		B42086D627ECC8F900B54FFD /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 				B47BDF3127E6652100A8057B /* MapViewController.swift */,
 				B42086E027ECC9B400B54FFD /* LoginViewController.swift */,
 				B42086E527ECC9C200B54FFD /* RegisterViewController.swift */,
+				13D7489B2806365E00E150F6 /* Restaurents.json */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,7 +156,6 @@
 				B47BDF0627E65DAA00A8057B /* LaunchScreen.storyboard */,
 				B47BDF0927E65DAA00A8057B /* Info.plist */,
 				B488467827F63916006DA038 /* loginData.json */,
-				13D7488728061EF200E150F6 /* Restaurents.json */,
 			);
 			path = Capstone_git;
 			sourceTree = "<group>";
@@ -284,6 +285,7 @@
 				B47BDF0827E65DAA00A8057B /* LaunchScreen.storyboard in Resources */,
 				B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */,
 				B47BDF0527E65DAA00A8057B /* Assets.xcassets in Resources */,
+				13D748992806365E00E150F6 /* Restaurents.json in Resources */,
 				B47BDF0327E65DA900A8057B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +360,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		13D7489B2806365E00E150F6 /* Restaurents.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13D7489A2806365E00E150F6 /* Base */,
+			);
+			name = Restaurents.json;
+			sourceTree = "<group>";
+		};
 		B47BDF0127E65DA900A8057B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
