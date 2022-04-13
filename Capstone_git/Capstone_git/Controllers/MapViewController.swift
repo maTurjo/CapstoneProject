@@ -1,8 +1,8 @@
 //
 //  MapViewController.swift
-//  midterm_MubassirAhmed_Turjo
 //
-//  Created by user202461 on 3/10/22.
+//
+//  Created by Mubassir Ahmed Turjo on 3/10/22.
 //
 
 import CoreLocation
@@ -31,6 +31,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Map Scene"
+        loadLocations()
         // Do any additional setup after loading the view.
         
         

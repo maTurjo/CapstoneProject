@@ -14,10 +14,10 @@
             filePath = "Capstone_git/Controllers/MapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "loadLocations()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A84F7A08-DC4F-45FC-BF4D-1BF0884E503A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Capstone_git/Controllers/LoginViewController.swift"
@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F4D5B07F-A7A3-43C2-B8C8-B956C382D7A3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Capstone_git/Controllers/LoginViewController.swift"
@@ -64,7 +64,131 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "loginClick(_:)"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Capstone_git/Controllers/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "MapViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - 92e7c796cb3965d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.(restaurantAnnotation in _9F96A28CEEEBD136D843A5D642F5961C).getter : Swift.Array&lt;Capstone_git.RestaurantLocation&gt;"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - 92e7c796cb3965d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.(restaurantAnnotation in _9F96A28CEEEBD136D843A5D642F5961C).setter : Swift.Array&lt;Capstone_git.RestaurantLocation&gt;"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - 92e7c796cb39669d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.(restaurantAnnotation in _9F96A28CEEEBD136D843A5D642F5961C).modify : Swift.Array&lt;Capstone_git.RestaurantLocation&gt;"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - e3313e25868f906f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.(restaurantAnnotation in _9F96A28CEEEBD136D843A5D642F5961C).modify : Swift.Array&lt;Capstone_git.RestaurantLocation&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - b4385a6768c698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Capstone_git.MapViewController"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "225">
+               </Location>
+               <Location
+                  uuid = "858CF06C-FE10-4784-A9B1-14B8F23681C8 - f6b32222ac66949f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Capstone_git.MapViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Capstone_git.MapViewController&gt;"
+                  moduleName = "Capstone_git"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user202461/Desktop/IOS%20labs/CapstoneProject/CapstoneProject/Capstone_git/Capstone_git/Controllers/MapViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FD75CE3-1E3C-44DA-803A-7B3F049A55D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Capstone_git/Controllers/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loadLocations()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
