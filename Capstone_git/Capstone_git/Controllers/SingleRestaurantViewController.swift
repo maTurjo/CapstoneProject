@@ -48,9 +48,9 @@ class SingleRestaurantViewController: UIViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cel1",for:indexPath) as! FoodTableCell
             let food = menu[indexPath.row]
             //cell.lblResName?.text = restaurent.name
-            cell.FoodImage = UIImage(named: foodImage)
-            cell.FoodName.text = foodName
-            cell.FoodPrice.text = foodPrice
+            //cell.FoodImage = UIImage(named: foodImage)
+            //cell.FoodName.text = foodName
+            //cell.FoodPrice.text = foodPrice
             return cell
         }
         
