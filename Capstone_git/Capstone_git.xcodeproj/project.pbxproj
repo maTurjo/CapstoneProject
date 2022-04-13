@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C7181CF280663E000BB3DD1 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7181CE280663E000BB3DD1 /* OrderViewController.swift */; };
+		2CAC206D28067FB000952247 /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAC206C28067FB000952247 /* ListOrdersViewController.swift */; };
 		B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */; };
 		B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C727ECC8A000B54FFD /* SearchListViewController.swift */; };
 		B42086CD27ECC8BC00B54FFD /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086CC27ECC8BC00B54FFD /* CategoryViewController.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		13D7488728061EF200E150F6 /* Restaurents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Restaurents.json; sourceTree = "<group>"; };
+		2C7181CE280663E000BB3DD1 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		2CAC206C28067FB000952247 /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantViewController.swift; sourceTree = "<group>"; };
 		B42086C727ECC8A000B54FFD /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		B42086CC27ECC8BC00B54FFD /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 				B47BDF3127E6652100A8057B /* MapViewController.swift */,
 				B42086E027ECC9B400B54FFD /* LoginViewController.swift */,
 				B42086E527ECC9C200B54FFD /* RegisterViewController.swift */,
+				2C7181CE280663E000BB3DD1 /* OrderViewController.swift */,
+				2CAC206C28067FB000952247 /* ListOrdersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 				B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */,
 				B42086D227ECC8D800B54FFD /* SingleFoodItemViewController.swift in Sources */,
 				B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */,
+				2CAC206D28067FB000952247 /* ListOrdersViewController.swift in Sources */,
 				B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */,
 				B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */,
 				B4CBC6F727EA57BB00677FF0 /* FeaturedCollectionViewCell.swift in Sources */,
@@ -320,6 +327,7 @@
 				B42086D727ECC8F900B54FFD /* CartViewController.swift in Sources */,
 				B42086E627ECC9C200B54FFD /* RegisterViewController.swift in Sources */,
 				B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */,
+				2C7181CF280663E000BB3DD1 /* OrderViewController.swift in Sources */,
 				B42086CD27ECC8BC00B54FFD /* CategoryViewController.swift in Sources */,
 				B42086E127ECC9B400B54FFD /* LoginViewController.swift in Sources */,
 				B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */,
