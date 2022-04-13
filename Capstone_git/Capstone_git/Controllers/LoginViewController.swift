@@ -26,7 +26,7 @@ public struct loginData:Identifiable,Decodable,Encodable{
     }
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,UITextFieldDelegate {
 
    
     
@@ -40,6 +40,8 @@ class LoginViewController: UIViewController {
         
         super.viewDidLoad()
     
+        userName.delegate = self
+        userPassword.delegate = self
         //adding existing data
         AppState.loginDataCol.append(loginData(userName: "Turjo", userPassword: "1234"))
         
@@ -77,7 +79,10 @@ class LoginViewController: UIViewController {
         
     }
     
-
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           return true;
+       }
     
     
  

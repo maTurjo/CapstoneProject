@@ -1,9 +1,7 @@
 //
 //  FeaturedViewController.swift
-//  Capstone_git
-//
-//  Created by user202461 on 3/23/22.
-//
+//  Capstone_git//
+//  Code Created by Sohilmahammad Liyakatali Polara
 
 import UIKit
 
@@ -12,7 +10,8 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
     @IBOutlet weak var dishSlider: UICollectionView!
     @IBOutlet weak var restaurantSlider: UICollectionView!
     @IBOutlet weak var label: UILabel!
-    var featuredImages:[String]=["01","02","03","04","05"]
+    var featuredImages:[String]=["mc","pizzapizza","tims","Red","Harvey"]
+    var featuredImages2:[String]=["pizza","wings","pasta","fries","burger"]
     @IBOutlet weak var topSlider: UICollectionView!
     var imgArr = [UIImage(named: "bakery"),UIImage(named: "cake-slice"),UIImage(named: "chicken-leg"),UIImage(named: "hamburger"),UIImage(named: "hot-soup"),UIImage(named: "momo"),UIImage(named: "pizza"),UIImage(named: "salad"),UIImage(named: "sandwhich")]
     var categoryArr = ["Bakery","Dessert","Chicken","Burger", "Soup","Momo", "Pizza","Salad", "Sandwhich"]
@@ -71,7 +70,7 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "singleCell", for: indexPath)
             as! DishCollectionView
             cell.lblDishName.text = restaurantNameArr[indexPath.row]
-            cell.imgDish.image=UIImage(named: featuredImages[indexPath.row])
+            cell.imgDish.image=UIImage(named: featuredImages2[indexPath.row])
             return cell
         }
         else
@@ -106,7 +105,7 @@ class FeaturedViewController: UIViewController,UICollectionViewDelegate,UICollec
         if(collectionView == topSlider)
         {
             let CategoryName = categoryArr[indexPath.row]
-            let vc = self.storyboard?.instantiateViewController(identifier: "CategoryViewController") as! CategoryViewController
+            let vc = self.storyboard?.instantiateViewController(identifier: "SearchListViewController") as! SearchListViewController
             vc.CategoryName = CategoryName
             //self.navigationController?.pushViewController(vc, animated: true)            
             vc.modalPresentationStyle = .fullScreen

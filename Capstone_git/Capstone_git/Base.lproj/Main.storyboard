@@ -288,7 +288,7 @@
         <!--Search View-->
         <scene sceneID="o9r-qe-Nnh">
             <objects>
-                <viewController id="se4-ee-DyK" userLabel="Search View" customClass="SearchListViewController" customModule="Capstone_git" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchListViewController" id="se4-ee-DyK" userLabel="Search View" customClass="SearchListViewController" customModule="Capstone_git" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fTG-Jf-rcj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,7 +452,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UVk-dR-bbF" userLabel="topSlider">
-                                <rect key="frame" x="5" y="44" width="404" height="107.5"/>
+                                <rect key="frame" x="5" y="44" width="404" height="117.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y49-Td-ACr">
                                     <size key="itemSize" width="70" height="70"/>
@@ -462,7 +462,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WgW-fX-TP5" customClass="TopSliderCollection" customModule="Capstone_git">
-                                        <rect key="frame" x="0.0" y="19" width="70" height="70"/>
+                                        <rect key="frame" x="0.0" y="24" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -500,14 +500,16 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Restaurents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDR-yf-fcI">
-                                <rect key="frame" x="5" y="161.5" width="404" height="71.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Top Restaurents" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="DDR-yf-fcI">
+                                <rect key="frame" x="5" y="161.5" width="404" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ekB-fE-lr6" userLabel="Restaurant Slider">
-                                <rect key="frame" x="5" y="243" width="404" height="179"/>
+                                <rect key="frame" x="5" y="191.5" width="404" height="179"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cek-Vw-1rT">
                                     <size key="itemSize" width="370" height="128"/>
@@ -560,13 +562,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Most Ordered Dishes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="Qx4-zY-HzZ" userLabel="MostOrderedDishes">
                                 <rect key="frame" x="5" y="432" width="404" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dsM-QH-sR8" userLabel="DishSlider">
-                                <rect key="frame" x="5" y="466" width="404" height="179"/>
+                                <rect key="frame" x="5" y="414.5" width="404" height="179.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u6e-VK-d2I">
                                     <size key="itemSize" width="370" height="128"/>
@@ -576,7 +578,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="singleCell" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-CT-Rkj" customClass="DishCollectionView" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25.5" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="26" width="128" height="128"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -632,9 +634,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dsM-QH-sR8" firstAttribute="height" secondItem="leA-Vz-dHa" secondAttribute="height" multiplier="0.2" id="3aI-FR-F94"/>
-                            <constraint firstItem="Qx4-zY-HzZ" firstAttribute="top" secondItem="ekB-fE-lr6" secondAttribute="bottom" constant="10" id="7EA-p1-cbx"/>
+                            <constraint firstItem="Qx4-zY-HzZ" firstAttribute="top" secondItem="ekB-fE-lr6" secondAttribute="bottom" constant="10" id="7EA-p1-cbx" userLabel="MostOrderedDishes5555555555555.top = Restaurant Slider.bottom"/>
                             <constraint firstItem="dsM-QH-sR8" firstAttribute="leading" secondItem="TXC-9z-X8O" secondAttribute="leading" constant="5" id="BUo-CY-Jno"/>
-                            <constraint firstItem="DDR-yf-fcI" firstAttribute="top" secondItem="UVk-dR-bbF" secondAttribute="bottom" constant="10" id="JfP-kY-0Oo"/>
+                            <constraint firstItem="DDR-yf-fcI" firstAttribute="top" secondItem="UVk-dR-bbF" secondAttribute="bottom" id="JfP-kY-0Oo"/>
                             <constraint firstItem="TXC-9z-X8O" firstAttribute="trailing" secondItem="UVk-dR-bbF" secondAttribute="trailing" constant="5" id="MP3-Na-2UZ"/>
                             <constraint firstItem="UVk-dR-bbF" firstAttribute="height" secondItem="leA-Vz-dHa" secondAttribute="height" multiplier="0.12" id="MRO-HK-u3o"/>
                             <constraint firstItem="UVk-dR-bbF" firstAttribute="leading" secondItem="TXC-9z-X8O" secondAttribute="leading" constant="5" id="MpM-D1-69O"/>
@@ -647,7 +649,7 @@
                             <constraint firstItem="TXC-9z-X8O" firstAttribute="trailing" secondItem="DDR-yf-fcI" secondAttribute="trailing" constant="5" id="kGO-ay-EvL"/>
                             <constraint firstItem="ekB-fE-lr6" firstAttribute="leading" secondItem="TXC-9z-X8O" secondAttribute="leading" constant="5" id="t1F-ui-Edc"/>
                             <constraint firstItem="TXC-9z-X8O" firstAttribute="trailing" secondItem="dsM-QH-sR8" secondAttribute="trailing" constant="5" id="vro-pO-YXJ"/>
-                            <constraint firstItem="dsM-QH-sR8" firstAttribute="top" secondItem="Qx4-zY-HzZ" secondAttribute="bottom" constant="10" id="xRg-rO-gRp"/>
+                            <constraint firstItem="dsM-QH-sR8" firstAttribute="top" secondItem="Qx4-zY-HzZ" secondAttribute="bottom" constant="10" id="xRg-rO-gRp" userLabel="DishSlider.top = MostOrderedDishes5555555555555.bottom"/>
                             <constraint firstAttribute="bottom" secondItem="6tJ-eA-iRq" secondAttribute="bottom" constant="150" id="xcZ-v9-OyK"/>
                         </constraints>
                     </view>
@@ -761,9 +763,6 @@
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="location" width="256" height="256"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

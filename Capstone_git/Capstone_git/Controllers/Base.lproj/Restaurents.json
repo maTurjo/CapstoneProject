@@ -1,5 +1,15 @@
 [
     {"name": "McDonald's","description": "Bakery, Chicken ,Fish, Burgers, Wraps","logo":"mc.png"},
-    {"name": "Boston Pizza","description": "Wings, Pizza, Sandwhichs, Italian, Salads","logo":"domi.png"},
-    {"name": "Boston Maggie","description": "Wings, Pizza, Sandwhichs, Italian, Salads","logo":"mc.png"}
+    {"name": "Boston Pizza","description": "Wings, Pizza, Sandwhichs, Italian, Salads, Dessert","logo":"domi.png"},
+    {"name": "Boston Maggie","description": "Wings, Pizza, Sandwhichs, Italian, Salads, Chicken","logo":"mc.png"},
+    {"name": "Tim Hortons","description": "Coffee, Sandwhichs, Burgers, Salads, Tea, Doughnuts, Momo","logo":"tims.png"},
+    {"name": "Wendys","description": "Coffee, Soft drink, Smoothy, Milkshake, Cake, Browney","logo":"wendys.png"},
+    {"name": "Boston Chicken","description": "Chicken Burger, Chicken Wings, Cocacola","logo":"boston.png"},
+    {"name": "Habit","description": "Original Burger,Greek Salad,BBQ Chicken Salad,Shakes,Sandwhich","logo":"habit.png"},
+    {"name": "Subway","description": "Wraps,Cookies,Taco,Breads","logo":"subway.png"},
+    {"name": "Harvey","description": "Sandwhich,Burgers,Colddrinks","logo":"Harvey.jpeg"},
+    {"name": "NYC","description": "Fries,Cold Drink","logo":"nyc.png"},
+    {"name": "Red Lobster","description": "Mashed Patatoes,Crab","logo":"boston.png"},
+    {"name": "Boston Maggie","description": "Original Burger,Greek Salad,BBQ ","logo":"Red.jpeg"},
+    {"name": "Baskin Robins","description": "Original Burger,Greek Salad,BBQ Chicken Salad,Shakes","logo":"boston.png"},
 ]

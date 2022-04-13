@@ -1,25 +1,25 @@
 //
 //  SearchListViewController.swift
 //  Capstone_git
-//
-//  Created by user202461 on 3/24/22.
-//
+//  Code Created by Sohilmahammad Liyakatali
 
 import UIKit
 
-class SearchListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class SearchListViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate {
 
     @IBOutlet weak var txtSearchRestaurent: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
+    var CategoryName:String = ""
    // var restaurentData = nil
     var restaurentData:[Restaurent] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtSearchRestaurent.text = CategoryName
         searchTableView.delegate = self
         searchTableView.dataSource = self
-                // Do any additional setup after loading the view.
+        txtSearchRestaurent.delegate = self
+        LoadDataInTableView()
     }
-    
     
     private func readLocalFile(_ name: String) -> Data? {
         do
@@ -37,7 +37,11 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
     }
 
     @IBAction func btnSearch_click(_ sender: Any) {
-        
+       LoadDataInTableView()
+    }
+    
+    func LoadDataInTableView()
+    {
         restaurentData = [Restaurent]()
         if let fileLocation = Bundle.main.path(forResource: "Restaurents", ofType: "json")
         {
@@ -47,7 +51,7 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
                 let data = try Data.init(contentsOf: URL(fileURLWithPath: fileLocation))
                 let JsonDecoder = JSONDecoder()
                 let datafromJson = try JsonDecoder.decode([Restaurent].self, from: data)
-                restaurentData  = datafromJson.filter{$0.name.starts(with: txtSearchRestaurent.text!) }
+                restaurentData  = datafromJson.filter{$0.name.starts(with: txtSearchRestaurent.text!) || $0.description.contains(txtSearchRestaurent.text!)}
                 searchTableView.reloadData()
             }
             catch
@@ -55,15 +59,11 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
                 print(error)
             }
         }
-       // var  d:Data = Data()
-        //d = readLocalFile("Restaurents.json")!
-        //print(d)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurentData.count
     }
-    	
   
     //Fill the table view with todo lost
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,6 +76,11 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
         cell.imgRestaurentLogo.image=UIImage(named: restaurent.logo)
         return cell
     }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder()
+           return true;
+       }
     
 }
 
