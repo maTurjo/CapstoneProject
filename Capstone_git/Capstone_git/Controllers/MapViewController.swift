@@ -47,8 +47,6 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
         manager.startUpdatingLocation();
     }
     
-    
-    
     //Loading saved Restaurant locations
     func loadLocations(){
         
