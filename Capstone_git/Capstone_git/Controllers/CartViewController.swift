@@ -10,11 +10,6 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var lblTaxAmount: UILabel!
     @IBOutlet weak var lblFinalTotalAmount: UILabel!
     
-    var cartItemName:[String]=["Pizaa (*2)","Chicken Wings (*1)"]
-    var cartItemDescription:[String]=["Med Fries [350.0 Cals], Med Coke[1.0 Cals]","Med Fried, Coca Cola, Mac Sause"]
-    var cartItemPrice:[String]=["CAD 30","CAD 20"]
-    var cartItemImage:[String]=["pizza_1","chicken_wings"]
-    
     @IBOutlet weak var summaryView: UIView!
     @IBOutlet weak var TableViewCartItem: UITableView!
     override func viewDidLoad() {
@@ -27,17 +22,17 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cartItemName.count
+        return cartItem.cartItemName.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1",for:indexPath) as! CartviewTableCell
-        cell.lblItemNAme?.text =  cartItemName[indexPath.row]
-        cell.lblItemDescription?.text =  cartItemDescription[indexPath.row]
-        cell.lblAmount?.text =  cartItemPrice[indexPath.row]        
-        cell.imgCart.image=UIImage(named: cartItemImage[indexPath.row])
+        cell.lblItemNAme?.text =  cartItem.cartItemName[indexPath.row]
+        cell.lblItemDescription?.text =  cartItem.cartItemDescription[indexPath.row]
+        cell.lblAmount?.text =  cartItem.cartItemPrice[indexPath.row]
+        cell.imgCart.image=UIImage(named: cartItem.cartItemImage[indexPath.row])
         cell.imgCart.layer.cornerRadius = 30
         return cell
     }
@@ -45,10 +40,10 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     //Wipe left delete
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteaction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandeler) in
-            self.cartItemName.remove(at: indexPath.row)
-            self.cartItemDescription.remove(at: indexPath.row)
-            self.cartItemImage.remove(at: indexPath.row)
-            self.cartItemPrice.remove(at: indexPath.row)
+            cartItem.cartItemName.remove(at: indexPath.row)
+            cartItem.cartItemDescription.remove(at: indexPath.row)
+            cartItem.cartItemImage.remove(at: indexPath.row)
+            cartItem.cartItemPrice.remove(at: indexPath.row)
             self.CalculateSummary()
             tableView.reloadData()
         }
@@ -60,8 +55,8 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         var TotalPrice:Double = 0.0
         var TaxAmount:Double = 0.0
         var FinalAmount:Double = 0.0
-        for i in 0..<cartItemPrice.count {
-            TotalPrice += Double(cartItemPrice[i].replacingOccurrences(of: "CAD ", with: ""))!
+        for i in 0..<cartItem.cartItemPrice.count {
+            TotalPrice += Double(cartItem.cartItemPrice[i].replacingOccurrences(of: "CAD ", with: ""))!
         }
         TaxAmount = (TotalPrice * 13) / 100
         FinalAmount = TotalPrice + TaxAmount
@@ -79,3 +74,14 @@ class CartviewTableCell:UITableViewCell{
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var lblItemDescription: UILabel!
 }
+
+
+class cartItem
+{
+    static var cartItemName:[String]=["Pizaa (*2)","Chicken Wings (*1)"]
+    static var cartItemDescription:[String]=["Med Fries [350.0 Cals], Med Coke[1.0 Cals]","Med Fried, Coca Cola, Mac Sause"]
+    static var cartItemPrice:[String]=["CAD 30","CAD 20"]
+    static var cartItemImage:[String]=["pizza_1","chicken_wings"]
+}
+
+
