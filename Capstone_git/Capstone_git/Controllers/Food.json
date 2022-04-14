@@ -2,25 +2,27 @@
     "ResName": "MacD",
     "Menu": [{
             "FoodName": "Burger",
-            "FoodImage": "burger.png"
+            "FoodImage": "burger.png",
             "FoodPrice": "$7.00"
         }, {
             "FoodName": "Pizza",
-            "FoodImage": "pizza.png"
+            "FoodImage": "pizza.png",
             "FoodPrice": "$12.00"
         }, {
             "FoodName": "wings",
-            "FoodImage": "wings.png"
+            "FoodImage": "wings.png",
             "FoodPrice": "$15.00"
         }, {
             "FoodName": "pasta",
-            "FoodImage": "pasta.png"
+            "FoodImage": "pasta.png",
             "FoodPrice": "$9.00"
         },
         {
             "FoodName": "fries",
-            "FoodImage": "fries.png"
+            "FoodImage": "fries.png",
             "FoodPrice": "$6.00"
         }
     ]
 }]
+
+
