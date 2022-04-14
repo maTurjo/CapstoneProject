@@ -7,38 +7,26 @@
 
 import UIKit
 
-class SingleRestaurantViewController: UIViewController {
+class SingleRestaurantViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var lblRestaurantName: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     var RestaurantName = "";
     var FoodName = "";
-    var restaurant:[RestaurantElement] = []
-    var menu:[Menu] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         lblRestaurantName.text = RestaurantName
         // Do any additional setup after loading the view.
         // do catch in case of error
-        if let fileLocation = Bundle.main.path(forResource: "food", ofType: "json")
-        {
-            // do catch in case of error
-            do
-            {
-                let data = try Data.init(contentsOf: URL(fileURLWithPath: fileLocation))
-                let JsonDecoder = JSONDecoder()
-                let datafromJson = try JsonDecoder.decode([RestaurantElement].self, from: data)
-                restaurant  = datafromJson.filter{$0.resName == RestaurantName }
-                let foodDatafromJson = try JsonDecoder.decode([Menu].self, from: data)
-                menu = foodDatafromJson.filter{$0.foodName == FoodName}
-            }
-            catch
-            {
-                print(error)
-            }
-        }
+        //print(Bundle.main.path(forResource: "Restuarents", ofType: "json"))
         
+    }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return restaurant.count
+            return foodItem.foodItemName.count
         }
             
       
@@ -46,11 +34,13 @@ class SingleRestaurantViewController: UIViewController {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "cel1",for:indexPath) as! FoodTableCell
-            let food = menu[indexPath.row]
-            //cell.lblResName?.text = restaurent.name
-            //cell.FoodImage = UIImage(named: foodImage)
-            //cell.FoodName.text = foodName
-            //cell.FoodPrice.text = foodPrice
+            //let food = menu[indexPath.row]
+            cell.FoodName.text = foodItem.foodItemName[indexPath.row]
+            cell.FoodImage.image = UIImage(named: foodItem.foodItemImage[indexPath.row])
+            //cell.FoodName.text = foodItem.foodItemName[indexPath.row]
+            cell.FoodPrice.text = foodItem.foodItemPrice[indexPath.row]
+            
+            //print(".\(menu.count) result ")
             return cell
         }
         
@@ -67,8 +57,7 @@ class SingleRestaurantViewController: UIViewController {
     }
     */
 
-}
-
+/*
 // MARK: - RestaurantElement
 struct RestaurantElement: Codable {
     let resName: String
@@ -81,6 +70,7 @@ struct Menu: Codable {
     let foodName, foodImage, foodPrice: String
 
 }
+ */
 
 
 class FoodTableCell : UITableViewCell{
@@ -93,3 +83,11 @@ class FoodTableCell : UITableViewCell{
     }
 }
 
+
+class foodItem
+{
+    static var foodItemName:[String]=["Pizza","wings","Burger","pasta","fries"]
+    static var foodItemPrice:[String]=["CAD 12.00","CAD 15.00","CAD 7.00","CAD 9.00","CAD 6.00"]
+    static var foodItemImage:[String]=["pizza.png","wings.png","burger.png","pasta.png","fries.png"]
+ 
+}
