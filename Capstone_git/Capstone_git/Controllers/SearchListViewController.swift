@@ -21,6 +21,14 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
         LoadDataInTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        txtSearchRestaurent.text = FeaturedViewController.SharedCategoryName
+        searchTableView.delegate = self
+        searchTableView.dataSource = self
+        txtSearchRestaurent.delegate = self
+        LoadDataInTableView()
+    }
+    
     private func readLocalFile(_ name: String) -> Data? {
         do
         {

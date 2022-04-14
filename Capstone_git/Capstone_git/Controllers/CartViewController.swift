@@ -21,6 +21,12 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         CalculateSummary()
     }
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        TableViewCartItem.reloadData()
+        CalculateSummary()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cartItem.cartItemName.count
     }
