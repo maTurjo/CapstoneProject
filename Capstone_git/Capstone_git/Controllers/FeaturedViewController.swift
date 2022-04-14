@@ -1,7 +1,4 @@
-//
-//  FeaturedViewController.swift
-//  Capstone_git//
-//  Code Created by Sohilmahammad Liyakatali Polara
+//Sohilmahammad Liyakatali Polara
 
 import UIKit
 

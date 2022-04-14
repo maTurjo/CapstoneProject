@@ -1,6 +1,4 @@
-//
-//  Created by Sohilmahammad Liyakatali Polara
-//
+//Created by Sohilmahammad Liyakatali Polara
 
 import UIKit
 

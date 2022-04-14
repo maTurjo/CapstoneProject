@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13D498EF280820E400186EEB /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D498EE280820E400186EEB /* ListOrdersViewController.swift */; };
 		13D748992806365E00E150F6 /* Restaurents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7489B2806365E00E150F6 /* Restaurents.json */; };
 		B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */; };
 		B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C727ECC8A000B54FFD /* SearchListViewController.swift */; };
@@ -27,7 +28,6 @@
 		B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47BDF3127E6652100A8057B /* MapViewController.swift */; };
 		B47BDF3727E6661700A8057B /* RestaurantsLocation.json in Resources */ = {isa = PBXBuildFile; fileRef = B47BDF3627E6661700A8057B /* RestaurantsLocation.json */; };
 		B488467927F63916006DA038 /* loginData.json in Resources */ = {isa = PBXBuildFile; fileRef = B488467827F63916006DA038 /* loginData.json */; };
-		B4CBC6F727EA57BB00677FF0 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13D498EE280820E400186EEB /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		13D7489A2806365E00E150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Restaurents.json; sourceTree = "<group>"; };
 		341673F82806A70F001A8546 /* Food.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Food.json; sourceTree = "<group>"; };
 		B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantViewController.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		B47BDF3127E6652100A8057B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B47BDF3627E6661700A8057B /* RestaurantsLocation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RestaurantsLocation.json; sourceTree = "<group>"; };
 		B488467827F63916006DA038 /* loginData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginData.json; sourceTree = "<group>"; };
-		B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */,
-				B4CBC6F627EA57BB00677FF0 /* FeaturedCollectionViewCell.swift */,
 				B42086C727ECC8A000B54FFD /* SearchListViewController.swift */,
 				B42086D127ECC8D800B54FFD /* SingleFoodItemViewController.swift */,
 				B42086D627ECC8F900B54FFD /* CartViewController.swift */,
@@ -118,6 +117,7 @@
 				B42086E527ECC9C200B54FFD /* RegisterViewController.swift */,
 				13D7489B2806365E00E150F6 /* Restaurents.json */,
 				341673F82806A70F001A8546 /* Food.json */,
+				13D498EE280820E400186EEB /* ListOrdersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,12 +315,12 @@
 				B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */,
 				B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */,
 				B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */,
-				B4CBC6F727EA57BB00677FF0 /* FeaturedCollectionViewCell.swift in Sources */,
 				B42086DC27ECC93B00B54FFD /* ProfileViewController.swift in Sources */,
 				B44A220227EB9FB800C309AC /* FeaturedViewController.swift in Sources */,
 				B42086D727ECC8F900B54FFD /* CartViewController.swift in Sources */,
 				B42086E627ECC9C200B54FFD /* RegisterViewController.swift in Sources */,
 				B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */,
+				13D498EF280820E400186EEB /* ListOrdersViewController.swift in Sources */,
 				B42086E127ECC9B400B54FFD /* LoginViewController.swift in Sources */,
 				B47BDF3227E6652100A8057B /* MapViewController.swift in Sources */,
 			);

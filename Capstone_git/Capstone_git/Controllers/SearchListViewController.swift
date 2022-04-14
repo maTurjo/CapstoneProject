@@ -1,7 +1,4 @@
-//
-//  SearchListViewController.swift
-//  Capstone_git
-//  Code Created by Sohilmahammad Liyakatali
+//Code Created by Sohilmahammad Liyakatali
 
 import UIKit
 
@@ -84,6 +81,18 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
         cell.imgRestaurentLogo.image=UIImage(named: restaurent.logo)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let restaurent = restaurentData[indexPath.row]
+        let vc = self.storyboard?.instantiateViewController(identifier: "SingleRestaurantViewController") as!         SingleRestaurantViewController
+        vc.RestaurantName = restaurent.name
+       // self.navigationController?.pushViewController(vc, animated: true)
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            textField.resignFirstResponder()

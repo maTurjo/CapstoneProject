@@ -1,9 +1,5 @@
-//
-//  SingleRestaurantViewController.swift
-//  Capstone_git
-//
-//  Created by user202461 on 3/24/22.
-//
+//  Created by Mihirkumar Bhoi
+
 
 import UIKit
 
@@ -49,34 +45,32 @@ class SingleRestaurantViewController: UIViewController,UITableViewDelegate,UITab
       // use the tag of button as index
         print(sender.tag)
         if(sender.tag == 0){
-            foodItem.foodItemPrice.append("CAD 12.00");
-            foodItem.foodItemName.append("Pizza");
-            foodItem.foodItemImage.append("pizza.png");
+            cartItem.cartItemPrice.append("CAD 20");
+            cartItem.cartItemName.append("French Fries");
+            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
+            cartItem.cartItemImage.append("fries_sauce");
         }
         if(sender.tag == 1)
         {
-            foodItem.foodItemPrice.append("CAD 15.00");
-            foodItem.foodItemName.append("Wings");
-            foodItem.foodItemImage.append("wings.png");
+            cartItem.cartItemPrice.append("CAD 50");
+            cartItem.cartItemName.append("Burger");
+            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
+            cartItem.cartItemImage.append("burger");
         }
         if(sender.tag == 2)
         {
-            foodItem.foodItemPrice.append("CAD 7.00");
-            foodItem.foodItemName.append("Burger");
-            foodItem.foodItemImage.append("burger.png");
+            cartItem.cartItemPrice.append("CAD 9.0");
+            cartItem.cartItemName.append("Pasta");
+            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
+            cartItem.cartItemImage.append("pasta");
         }
         if(sender.tag == 3)
         {
-            foodItem.foodItemPrice.append("CAD 9.00");
-            foodItem.foodItemName.append("Pasta");
-            foodItem.foodItemImage.append("pasta.png");
-        }
-        if(sender.tag == 4)
-        {
-            foodItem.foodItemPrice.append("CAD 6.00");
-            foodItem.foodItemName.append("Fries");
-            foodItem.foodItemImage.append("fries.png");
-        }
+            cartItem.cartItemPrice.append("CAD 9.0");
+            cartItem.cartItemName.append("Pasta");
+            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
+            cartItem.cartItemImage.append("pasta");
+        }        
         //CartViewController.TableViewCartItem.reloadData()
     }
     
