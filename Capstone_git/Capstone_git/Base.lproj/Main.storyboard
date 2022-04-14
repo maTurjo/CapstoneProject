@@ -69,12 +69,21 @@
                                     <constraint firstItem="J5I-lz-qEi" firstAttribute="width" secondItem="KcM-y9-mwH" secondAttribute="width" id="bzQ-nR-L2o"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-2" translatesAutoresizingMaskIntoConstraints="NO" id="hoZ-W7-yrH">
+                                <rect key="frame" x="147.5" y="94" width="119" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hoZ-W7-yrH" secondAttribute="height" multiplier="119:115" id="cdj-qf-TSJ"/>
+                                    <constraint firstAttribute="height" constant="115" id="tQx-Yl-ksB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O8L-u7-SHo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KcM-y9-mwH" firstAttribute="centerY" secondItem="XW1-eN-b7W" secondAttribute="centerY" id="C1l-lx-FL3"/>
                             <constraint firstItem="KcM-y9-mwH" firstAttribute="centerX" secondItem="XW1-eN-b7W" secondAttribute="centerX" id="VVg-Uq-SV0"/>
+                            <constraint firstItem="hoZ-W7-yrH" firstAttribute="top" secondItem="O8L-u7-SHo" secondAttribute="top" constant="50" id="aJu-NL-9df"/>
+                            <constraint firstItem="hoZ-W7-yrH" firstAttribute="centerX" secondItem="XW1-eN-b7W" secondAttribute="centerX" id="gk9-DS-3mO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -85,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfb-kD-Uno" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2922" y="-755"/>
+            <point key="canvasLocation" x="-2923.1884057971015" y="-755.35714285714278"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Tff-tw-Qa3">
@@ -692,7 +701,7 @@
                                 <rect key="frame" x="5" y="683" width="404" height="179"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell1" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="110" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-io-t2o" customClass="AllRestaurentTableCell" customModule="Capstone_git" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell1" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="110" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-io-t2o" customClass="AllRestaurentTableCell" customModule="Capstone_git" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="404" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hjd-io-t2o" id="LFH-hP-2uW">
@@ -1135,6 +1144,7 @@
         <image name="launch icon" width="234" height="284"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="location" width="256" height="256"/>
+        <image name="logo-2" width="795" height="785"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
