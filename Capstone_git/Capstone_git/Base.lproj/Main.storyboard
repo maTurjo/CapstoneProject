@@ -538,9 +538,9 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="singleCell" translatesAutoresizingMaskIntoConstraints="NO" id="4gm-lb-phW" customClass="RestaurentCollectionView" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-35.5" width="50" height="250"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="128" height="128"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="tbo-JR-2xs" userLabel="Img Restaurant">
@@ -596,9 +596,9 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="singleCell" translatesAutoresizingMaskIntoConstraints="NO" id="gcv-CT-Rkj" customClass="DishCollectionView" customModule="Capstone_git" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-35.5" width="40" height="250"/>
+                                        <rect key="frame" x="0.0" y="26" width="128" height="128"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="03" translatesAutoresizingMaskIntoConstraints="NO" id="hiW-ZE-0eD" userLabel="Img Restaurant">
@@ -668,7 +668,7 @@
                                 <rect key="frame" x="5" y="634" width="404" height="179"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell1" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="110" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-io-t2o" customClass="AllRestaurentTableCell" customModule="Capstone_git" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="cell1" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="110" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-io-t2o" customClass="AllRestaurentTableCell" customModule="Capstone_git" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="404" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hjd-io-t2o" id="LFH-hP-2uW">
