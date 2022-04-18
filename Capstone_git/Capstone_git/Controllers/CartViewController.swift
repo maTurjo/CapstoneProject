@@ -1,15 +1,17 @@
-//Created by Sohilmahammad Liyakatali Polara
+//Created by Sohilmahammad Liyakatali Polara, Shruti
 
 import UIKit
 
 class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
+    //Variables and outlet declaration---------------------
     @IBOutlet weak var lblSubTotalAmount: UILabel!
     @IBOutlet weak var lblTaxAmount: UILabel!
     @IBOutlet weak var lblFinalTotalAmount: UILabel!
-    
     @IBOutlet weak var summaryView: UIView!
     @IBOutlet weak var TableViewCartItem: UITableView!
+    //Variables and outlet declaration---------------------
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TableViewCartItem.delegate = self
@@ -25,11 +27,12 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         CalculateSummary()
     }
     
+    //This function returns count of items in cart
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cartItem.cartItemName.count
     }
     
-    
+    //This fucntion is called for every row of the tabe view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1",for:indexPath) as! CartviewTableCell
@@ -41,7 +44,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
-    //Wipe left delete
+    //Swipe left action of the table view
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteaction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandeler) in
             cartItem.cartItemName.remove(at: indexPath.row)
@@ -54,6 +57,7 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return UISwipeActionsConfiguration(actions: [deleteaction])
     }
     
+    //This function calculates summary amount for all items in the cart
     func CalculateSummary()
     {
         var TotalPrice:Double = 0.0
@@ -64,9 +68,9 @@ class CartViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }
         TaxAmount = (TotalPrice * 13) / 100
         FinalAmount = TotalPrice + TaxAmount
-        lblSubTotalAmount.text =  "CAD " + String(TotalPrice)
-        lblTaxAmount.text = "CAD " +  String(TaxAmount)
-        lblFinalTotalAmount .text =  "CAD " + String(FinalAmount)
+        lblSubTotalAmount.text =  "CAD " +  String(format: "%.2f",TotalPrice)
+        lblTaxAmount.text = "CAD " +  String(format: "%.2f",TaxAmount)
+        lblFinalTotalAmount .text =  "CAD " + String(format: "%.2f",FinalAmount)		
     }
     
 }
@@ -79,7 +83,7 @@ class CartviewTableCell:UITableViewCell{
     @IBOutlet weak var lblItemDescription: UILabel!
 }
 
-
+//All members of this class are static so that they can be accessed by all other controllers without a need to create an instance of the class cartItem
 class cartItem
 {
     static var cartItemName:[String]=["Pizaa (*2)","Chicken Wings (*1)"]
@@ -87,5 +91,6 @@ class cartItem
     static var cartItemPrice:[String]=["CAD 30","CAD 20"]
     static var cartItemImage:[String]=["pizza_1","chicken_wings"]
 }
+
 
 

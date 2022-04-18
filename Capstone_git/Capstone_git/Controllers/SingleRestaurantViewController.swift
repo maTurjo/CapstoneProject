@@ -9,72 +9,42 @@ class SingleRestaurantViewController: UIViewController,UITableViewDelegate,UITab
     @IBOutlet weak var tableView: UITableView!
     var RestaurantName = "";
     var FoodName = "";
-    override func viewDidLoad() {
+    var foodItemArr = DataController.FoodItems
+    override func viewDidLoad() {        
+        
         super.viewDidLoad()
         
         tableView.delegate = self
-        tableView.dataSource = self
-        
+        tableView.dataSource = self        
         lblRestaurantName.text = RestaurantName
-        // Do any additional setup after loading the view.
-        // do catch in case of error
-        //print(Bundle.main.path(forResource: "Restuarents", ofType: "json"))
+        foodItemArr = DataController.FoodItems.filter{$0.HotelName == RestaurantName}
         
-    }
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return foodItem.foodItemName.count
-        }
-            
-      
-        //Fill the table view with todo lost
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cel1",for:indexPath) as! FoodTableCell
-            //let food = menu[indexPath.row]
-            cell.FoodName.text = foodItem.foodItemName[indexPath.row]
-            cell.FoodImage.image = UIImage(named: foodItem.foodItemImage[indexPath.row])
-            //cell.FoodName.text = foodItem.foodItemName[indexPath.row]
-            cell.FoodPrice.text = foodItem.foodItemPrice[indexPath.row]
-            cell.addToCart.tag = indexPath.row
-            cell.addToCart.addTarget(self, action: #selector(subscribeTapped(_:)), for: .touchUpInside)
-            //print(".\(menu.count) result ")
-            return cell
-        }
-     
-    @objc func subscribeTapped(_ sender: UIButton){
-      // use the tag of button as index
-        print(sender.tag)
-        if(sender.tag == 0){
-            cartItem.cartItemPrice.append("CAD 20");
-            cartItem.cartItemName.append("French Fries");
-            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
-            cartItem.cartItemImage.append("fries_sauce");
-        }
-        if(sender.tag == 1)
-        {
-            cartItem.cartItemPrice.append("CAD 50");
-            cartItem.cartItemName.append("Burger");
-            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
-            cartItem.cartItemImage.append("burger");
-        }
-        if(sender.tag == 2)
-        {
-            cartItem.cartItemPrice.append("CAD 9.0");
-            cartItem.cartItemName.append("Pasta");
-            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
-            cartItem.cartItemImage.append("pasta");
-        }
-        if(sender.tag == 3)
-        {
-            cartItem.cartItemPrice.append("CAD 9.0");
-            cartItem.cartItemName.append("Pasta");
-            cartItem.cartItemDescription.append("Coke, Fries, Water bottle");
-            cartItem.cartItemImage.append("pasta");
-        }        
-        //CartViewController.TableViewCartItem.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return foodItemArr.count
     }
+        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cel1",for:indexPath) as! FoodTableCell
+            cell.FoodName.text = foodItemArr[indexPath.row].ItemName
+            cell.FoodImage.image = UIImage(named: foodItemArr[indexPath.row].ItemImage)
+            cell.FoodPrice.text = foodItemArr[indexPath.row].Price
+            cell.addToCart.tag = indexPath.row
+            cell.addToCart.addTarget(self, action: #selector(addtoCartTapped(_:)), for: .touchUpInside)
+            return cell
+    }
+     
+    @objc func addtoCartTapped(_ sender: UIButton)
+    {
+        cartItem.cartItemPrice.append(foodItemArr[sender.tag].Price);
+        cartItem.cartItemName.append(foodItemArr[sender.tag].ItemName);
+        cartItem.cartItemDescription.append(foodItemArr[sender.tag].ItemDescription);
+        cartItem.cartItemImage.append(foodItemArr[sender.tag].ItemImage);
+    }
+    
+}
     
 
     /*

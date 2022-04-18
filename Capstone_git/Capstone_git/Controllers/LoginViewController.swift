@@ -43,9 +43,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         userName.delegate = self
         userPassword.delegate = self
         //adding existing data
-        AppState.loginDataCol.append(loginData(userName: "Turjo", userPassword: "1234"))
-        
-        // Do any additional setup after loading the view.
+        AppState.loginDataCol.append(loginData(userName: "admin", userPassword: "admin"))
     }
     
     
@@ -66,7 +64,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
         errorBox.text = "Please Enter Correct Credentials"
         errorBox.textColor=UIColor.red
- 
+        changeToHomeScreen()
         
     }
     

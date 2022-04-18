@@ -44,18 +44,30 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
         let userName=name.text!
         let userPassword=password.text!
         
+        if(userName == "" || userPassword == "" )
+        {
+            name.layer.borderWidth=1
+            name.layer.borderColor=CGColor.init(red: 255, green: 0, blue: 0, alpha: 1)
+
+            password.layer.borderWidth=1
+            password.layer.borderColor=CGColor.init(red: 255, green: 0, blue: 0, alpha: 1)
+            return
+        }
+        
         let newUser:loginData = loginData(userName: userName, userPassword: userPassword)
-                        
         AppState.loginDataCol.append(newUser)
         
-      
-        
+        changeToLoginScreen();        
     }
     
-    
- 
- 
-    
+    func changeToLoginScreen()
+    {
+       let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+       let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginController")
+
+       newViewController.modalPresentationStyle = .fullScreen
+       self.present(newViewController, animated: true, completion: nil)
+    }
 
 }
 

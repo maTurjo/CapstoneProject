@@ -7,8 +7,8 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var txtSearchRestaurent: UITextField!
     @IBOutlet weak var searchTableView: UITableView!
     var CategoryName:String = ""
-   // var restaurentData = nil
-    var restaurentData:[Restaurent] = []
+    var restaurantList = DataController.Restaurants
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         txtSearchRestaurent.text = FeaturedViewController.SharedCategoryName
@@ -47,48 +47,34 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
     
     func LoadDataInTableView()
     {
-        restaurentData = [Restaurent]()
-        if let fileLocation = Bundle.main.path(forResource: "Restaurents", ofType: "json")
+        restaurantList = DataController.Restaurants
+        if(txtSearchRestaurent.text != "")
         {
-            // do catch in case of error
-            do
-            {
-                let data = try Data.init(contentsOf: URL(fileURLWithPath: fileLocation))
-                let JsonDecoder = JSONDecoder()
-                let datafromJson = try JsonDecoder.decode([Restaurent].self, from: data)
-                restaurentData  = datafromJson.filter{$0.name.starts(with: txtSearchRestaurent.text!) || $0.description.contains(txtSearchRestaurent.text!)}
-                searchTableView.reloadData()
-            }
-            catch
-            {
-                print(error)
-            }
+          restaurantList = restaurantList.filter({$0.RestaurantsName.starts(with: txtSearchRestaurent.text!) || $0.Description.contains(txtSearchRestaurent.text!)})
         }
+        searchTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurentData.count
+        print(restaurantList.count)
+        return restaurantList.count
     }
   
-    //Fill the table view with todo lost
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1",for:indexPath) as! RestaurentTableCell
-        let restaurent = restaurentData[indexPath.row]
-        //cell.lblResName?.text = restaurent.name
-        cell.lblResName?.text =  restaurent.name
-        cell.lblDescription?.text =  restaurent.description
-        cell.imgRestaurentLogo.image=UIImage(named: restaurent.logo)
+        cell.lblResName?.text = restaurantList[indexPath.row].RestaurantsName
+        cell.lblDescription?.text = restaurantList[indexPath.row].Description
+        cell.imgRestaurentLogo.image=UIImage(named: restaurantList[indexPath.row].HotelImage)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let restaurent = restaurentData[indexPath.row]
-        let vc = self.storyboard?.instantiateViewController(identifier: "SingleRestaurantViewController") as!         SingleRestaurantViewController
-        vc.RestaurantName = restaurent.name
-       // self.navigationController?.pushViewController(vc, animated: true)
-        
+        let restaurent = restaurantList[indexPath.row]
+        let vc = self.storyboard?.instantiateViewController(identifier: "SingleRestaurantViewController") as! SingleRestaurantViewController
+        vc.RestaurantName = restaurent.RestaurantsName
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
@@ -97,16 +83,8 @@ class SearchListViewController: UIViewController,UITableViewDelegate,UITableView
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
            textField.resignFirstResponder()
            return true;
-       }
-    
+    }
 }
-
-struct Restaurent:Codable{
-    let name: String
-    let description: String
-    let logo: String    
-}
-
 
 class RestaurentTableCell:UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!

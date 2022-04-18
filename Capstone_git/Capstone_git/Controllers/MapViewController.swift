@@ -76,15 +76,11 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
     
     func render(_ location:CLLocation){
         
-            let annotation=MKPointAnnotation();
+        let annotation=MKPointAnnotation();
             annotation.title="Home"
         annotation.subtitle="You are here"
-          
         
-          //let coordinate=CLLocationCoordinate2D(latitude:location.coordinate.latitude,longitude:location.coordinate.longitude)
-
-        
-            annotation.coordinate=CLLocationCoordinate2D(latitude:location.coordinate.latitude,longitude:location.coordinate.longitude)
+        annotation.coordinate=CLLocationCoordinate2D(latitude:location.coordinate.latitude,longitude:location.coordinate.longitude)
         
         let span=MKCoordinateSpan(latitudeDelta:0.1,longitudeDelta:0.1)
 
@@ -98,7 +94,7 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
             resAnnotation.coordinate=CLLocationCoordinate2D(latitude:item.latitude,longitude:item.longitude)
             myloc.addAnnotation(resAnnotation)
         }
-      }
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
@@ -110,16 +106,5 @@ class MapViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDel
         
         return annotationView
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

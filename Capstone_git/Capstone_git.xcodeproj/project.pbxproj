@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C3399F280BB01100440E34 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C3399E280BB01100440E34 /* DataController.swift */; };
 		13D498EF280820E400186EEB /* ListOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D498EE280820E400186EEB /* ListOrdersViewController.swift */; };
 		13D748992806365E00E150F6 /* Restaurents.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7489B2806365E00E150F6 /* Restaurents.json */; };
 		B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */; };
 		B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086C727ECC8A000B54FFD /* SearchListViewController.swift */; };
-		B42086D227ECC8D800B54FFD /* SingleFoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086D127ECC8D800B54FFD /* SingleFoodItemViewController.swift */; };
 		B42086D727ECC8F900B54FFD /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086D627ECC8F900B54FFD /* CartViewController.swift */; };
-		B42086DC27ECC93B00B54FFD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086DB27ECC93B00B54FFD /* ProfileViewController.swift */; };
 		B42086E127ECC9B400B54FFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086E027ECC9B400B54FFD /* LoginViewController.swift */; };
 		B42086E627ECC9C200B54FFD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42086E527ECC9C200B54FFD /* RegisterViewController.swift */; };
 		B44A220227EB9FB800C309AC /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44A220127EB9FB800C309AC /* FeaturedViewController.swift */; };
@@ -48,14 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13C3399E280BB01100440E34 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		13D498EE280820E400186EEB /* ListOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrdersViewController.swift; sourceTree = "<group>"; };
 		13D7489A2806365E00E150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Restaurents.json; sourceTree = "<group>"; };
 		341673F82806A70F001A8546 /* Food.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Food.json; sourceTree = "<group>"; };
 		B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRestaurantViewController.swift; sourceTree = "<group>"; };
 		B42086C727ECC8A000B54FFD /* SearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
-		B42086D127ECC8D800B54FFD /* SingleFoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFoodItemViewController.swift; sourceTree = "<group>"; };
 		B42086D627ECC8F900B54FFD /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		B42086DB27ECC93B00B54FFD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B42086E027ECC9B400B54FFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B42086E527ECC9C200B54FFD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B44A220127EB9FB800C309AC /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
@@ -108,9 +106,7 @@
 			children = (
 				B42086C227ECC88B00B54FFD /* SingleRestaurantViewController.swift */,
 				B42086C727ECC8A000B54FFD /* SearchListViewController.swift */,
-				B42086D127ECC8D800B54FFD /* SingleFoodItemViewController.swift */,
 				B42086D627ECC8F900B54FFD /* CartViewController.swift */,
-				B42086DB27ECC93B00B54FFD /* ProfileViewController.swift */,
 				B44A220127EB9FB800C309AC /* FeaturedViewController.swift */,
 				B47BDF3127E6652100A8057B /* MapViewController.swift */,
 				B42086E027ECC9B400B54FFD /* LoginViewController.swift */,
@@ -118,6 +114,7 @@
 				13D7489B2806365E00E150F6 /* Restaurents.json */,
 				341673F82806A70F001A8546 /* Food.json */,
 				13D498EE280820E400186EEB /* ListOrdersViewController.swift */,
+				13C3399E280BB01100440E34 /* DataController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -311,12 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B42086C327ECC88B00B54FFD /* SingleRestaurantViewController.swift in Sources */,
-				B42086D227ECC8D800B54FFD /* SingleFoodItemViewController.swift in Sources */,
 				B47BDF0027E65DA900A8057B /* ViewController.swift in Sources */,
 				B42086C827ECC8A000B54FFD /* SearchListViewController.swift in Sources */,
 				B47BDEFC27E65DA900A8057B /* AppDelegate.swift in Sources */,
-				B42086DC27ECC93B00B54FFD /* ProfileViewController.swift in Sources */,
 				B44A220227EB9FB800C309AC /* FeaturedViewController.swift in Sources */,
+				13C3399F280BB01100440E34 /* DataController.swift in Sources */,
 				B42086D727ECC8F900B54FFD /* CartViewController.swift in Sources */,
 				B42086E627ECC9C200B54FFD /* RegisterViewController.swift in Sources */,
 				B47BDEFE27E65DA900A8057B /* SceneDelegate.swift in Sources */,

@@ -1,9 +1,6 @@
-//
 //  ListOrdersViewController.swift
 //  Capstone_git
-//
-//  Created by user204866 on 4/13/22.
-//
+//  Created by Vidhi Jadav
 
 import UIKit
 
@@ -26,8 +23,7 @@ class ListOrdersViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.orderDate?.text = orderItem.orderDate[indexPath.row]
         cell.orderImage.image=UIImage(named: orderItem.orderItemImage[indexPath.row])
         cell.orderImage.layer.cornerRadius = 30
-        return cell
-        
+        return cell        
     }
     
     override func viewDidLoad() {
@@ -38,26 +34,10 @@ class ListOrdersViewController: UIViewController, UITableViewDelegate, UITableVi
         TableViewOrderItem.estimatedRowHeight = UITableView.automaticDimension
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
     
-class OrderViewTableCell: UITableViewCell{   
-   
-    
-    
-    
+class OrderViewTableCell: UITableViewCell {
    
     @IBOutlet weak var orderPrice: UILabel!
     @IBOutlet weak var orderNumber: UILabel!
